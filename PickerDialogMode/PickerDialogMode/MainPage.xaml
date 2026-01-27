@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:picker="clr-namespace:Syncfusion.Maui.Picker;assembly=Syncfusion.Maui.Picker"
+             x:Class="PickerDialogMode.MainPage">
+
+    <Grid>
+        <picker:SfPicker 
+            x:Name="picker"
+            Mode="Dialog"
+            PopupHeight="300"
+            PopupWidth="200">
+            <picker:SfPicker.Columns>
+                <picker:PickerColumn>
+                    <picker:PickerColumn.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Red</x:String>
+                            <x:String>Green</x:String>
+                            <x:String>Blue</x:String>
+                            <x:String>Yellow</x:String>
+                            <x:String>Orange</x:String>
+                            <x:String>Purple</x:String>
+                        </x:Array>
+                    </picker:PickerColumn.ItemsSource>
+                </picker:PickerColumn>
+            </picker:SfPicker.Columns>
+            <picker:SfPicker.HeaderView>
+                <picker:PickerHeaderView Text="Select a Color" Height="40"/>
+            </picker:SfPicker.HeaderView>
+            <picker:SfPicker.FooterView>
+                <picker:PickerFooterView ShowOkButton="True" Height="40"/>
+            </picker:SfPicker.FooterView>
+            <Button Text="Open Picker" 
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center"
+                    Clicked="Handle_Clicked"/>
+        </picker:SfPicker>
+    </Grid>
+
+</ContentPage>
